@@ -1,9 +1,9 @@
 import React from "react";
 
-const Page = () => {
+const Page = () => { 
     return (
         <div>
-            <h1>WineCard</h1>
+            <h1>Spirits</h1>
         </div>
     )
 }

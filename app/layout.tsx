@@ -25,7 +25,7 @@ const RootLayout = ({children}: {children: ReactNode}) => {
   return (
     <html lang="en">
       <body
-       className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`}
+       className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased flex flex-col`}
       >
         {children}
       </body>

@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import sampleWines from "@/constants";
+import sampleWines from "@/DummyData";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,9 +10,9 @@ import Link from "next/link";
 
 const Wines = () => {
   return (
-    <div className="flex flex-col mt-40">
-      <h1 className="flex flex-row justify-center text-align-center text-4xl ">Popular wines</h1>
-      <div className="font-bebas-neue flex flex-wrap gap-5 max-xs:justify-between xs:gap-10 grid grid-cols-5 gap-4 grid-rows-5 pr-20 pl-80">
+    <div className="">
+      <h1 className="text-align-center text-4xl ">Popular wines</h1>
+      <div className="grid grid-cols-5 gap-2">
         {sampleWines.map((wine,index) => {
           return (
             <Link href={`/shop/${wine.title}`} key={index}>

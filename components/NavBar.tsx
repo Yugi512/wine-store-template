@@ -15,10 +15,10 @@ const NavBar: React.FC<NavBarProps> = ({ pathName })=> {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/shop">Shop</Link>
+                            <Link href="/wines">Wines</Link>
                         </li>
                         <li>
-                            <Link href="/staff-pick">Staff Pick</Link>
+                            <Link href="/spirits">Spirits</Link>
                         </li>
                     </ul>
         </section>

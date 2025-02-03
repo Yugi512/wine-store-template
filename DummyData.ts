@@ -4,7 +4,7 @@ const sampleWines = [
 		"title": "Levert Cremant de Bourgogne Rose Sparkling Wine",
 		"ml": "750",
 		"stock": "10",
-		"price": "$20.99",
+		"price": "20.99",
 		"rating": "4.4",
 		"reviews": [
 			{ "uuid": "id", "userName": "names", "reviews": "its good" }
@@ -279,7 +279,7 @@ const sampleWines = [
 		"Varietal": "Sparkling Wine, Rose",
 		"type": "Rose",
 		"abv": "12",
-		"image": "https://www.totalwine.com/dynamic/490x/media/sys_master/twmmedia/h19/hed/12291775168542.png",
+		"image": "https://www.totalwine.com/dynamic/x220,sq/media/sys_master/twmmedia/h27/h2c/12292041015326.png",
 		"description": "North Coast, CA - Generous aromas of candied orange, raspberry preserve and orange blossom complemented by notes of vanilla, honey and brioche. There are juicy flavors of peach, strawberry shortcake and lemon curd. A fresh, juicy acidity drives to a bright, clean finish.",
 		"reviews": [
 			{ "uuid": "id", "userName": "names", "reviews": "its good" }

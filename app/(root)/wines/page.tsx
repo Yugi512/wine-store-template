@@ -1,10 +1,10 @@
-import WineCard from "@/components/WineCard";
+import Wines from "@/components/Wines";
 import React from "react";
 
-const Page = () => {
+const Page = () => { 
     return (
         <div>
-            <WineCard />
+            <Wines />
         </div>
     )
 }

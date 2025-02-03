@@ -4,7 +4,7 @@ import Headers from "@/components/headers";
 const Layout = ({children}: {children:ReactNode}) => {
     return (
         <main>
-            <div className="root container text-center">
+            <div className="root container text- grid grid-cols-1">
                 <Headers />
                 <div>{children}</div>
             </div>
@@ -12,4 +12,4 @@ const Layout = ({children}: {children:ReactNode}) => {
     )
 }
 
-export default Layout
+export default Layout;
