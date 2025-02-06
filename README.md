@@ -18,19 +18,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Future plans for website
 
-## Learn More
+this is a template and isnt intended for enterprise use its a ecommerce website that I am creating to test out features and develop and hone my skills as a full stack dev. I am still somewhat inexperienced and I use these projects to see where I am lacking in terms of skills and so far compared to my last project I seem to be doing better as I have a working decent looking frontend that works, and I connected to the backedn using neon and drizzle orm, and upstash redis. I shall update these projects every month to basically build them out slowly until they are viable production grade websites that I can deploy and then move it from a monolithic app to an app comprised of microservices 
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tasks to complete in the near future
+- need to build out admin page, and its components next 
+- implement accounts and display info on my-profile page showing past orders, current order, address, payments, reward points, if they have any coupons, and birthdays 
+- add sidebar, and filter options to the wines and spirits page so that you can filter by varietal, spirit (whiskey,rum,tequila), the type for wine its red white sparkling etc..., for liquor it could be age
+- add to cart feature for the items being displayed in both the individual card and then the list format
+- implement stripe and more authentication factors, add refunds and stuff of that nature
+- create the orms for the wines and spirits and reviews
+- connect users with their reviews, the reviews with the specified bottle of alcohol, and all the reviews to the bottle that they pertain to 
+- add error page incase anything stops working so users dont recieve a 404
+- refactor code so that its clean and has 0(log n) runtime complexity or close enough
+- seed database after creating orms
+- write test cases for every component and test data 
+- make the website look prettier

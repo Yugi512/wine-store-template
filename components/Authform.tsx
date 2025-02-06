@@ -18,25 +18,45 @@ import {
 import { Input } from "@/components/ui/input"
 import Link from 'next/link';
 import { FIELD_NAMES, FIELD_TYPES } from '@/constants';
+import { title } from 'process';
+import { useRouter } from 'next/navigation';
+import { toast } from "@/hooks/use-toast"
 
 interface Props<T extends FieldValues> {
     schema: ZodType<T>;
     defaultValues: T;
-    onsUbmit: (data: T) => Promise<{sucess: boolean; error?: string}>;
+    onSubmit: (data: T) => Promise<{success: boolean; error?: string}>;
     type: 'SIGN_IN' | 'SIGN_UP';
 };
 
 
 const AuthForm = <T extends FieldValues>({type,schema, defaultValues , onSubmit} : Props<T>) => {
+    const router = useRouter();
     const isSignIn = type === 'SIGN_IN';
 
     const form: UseFormReturn<T> = useForm({
-        resolver: zodResolver(schema),
-        defaultValues: defaultValues as DefaultValues<T>,
+      resolver: zodResolver(schema),
+      defaultValues: defaultValues as DefaultValues<T>,
     });
 
     const handleSubmt: SubmitHandler<T> = async (data) => {
+      const result = await onSubmit(data)
 
+      if (result.success){
+        toast({
+          title: "Success",
+          description: isSignIn 
+            ? "You have Successfully signed in"
+            : "Ypu have successfully signed up",
+        })
+        router.push("/")
+      } else {
+        toast({
+          title: `Error ${isSignIn ? "signing in" : "signing up"}`,
+          description: result.error ?? "An error occurred",
+          variant: "destructive"
+        })
+      }
     }
     return (
       <div className='flex flex-col gap-4'>

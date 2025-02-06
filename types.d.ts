@@ -10,75 +10,98 @@ interface WineBottle {
         country: string;
         region: string;
         brand: string;
-        Varietal: string;
+        varietal: string;
         type: string;
         abv: number;
         description: string;
-        reviews: Review[];
+        image: string,
+        review: Review[];
+}
+
+interface LiquorBottle {
+    id: number;
+    title: string;
+    ml: number;
+    price: number;
+    rating: number;
+    availability: boolean;
+    country: string;
+    region: string;
+    brand: string;
+    spirits: string;
+    type: string;
+    abv: number;
+    description: string;
+    image: string,
+    reviews: Review[];
 }
 
 interface Review {
     uuid: number;
     userName: string;
-    review: string;
+    reviews: string;
 }
 
 
 interface User {
     id: number;
-    name: string;
+    username: string;
     email: string;
     password: string;
-    isAdmin: boolean;
-    cart: Cart;
-    reviews: Review[];
+    role: string;
+    lastActive: Date,
+    createdAt: Date
+    // cart: Cart;    
+    // reviews: Review[];
 }
 
-interface AuthCredentials{
-    email: string;
+interface AuthCredentials {
+    username: string,
+    email: string,
     password: string;
 }
 
-interface Cart {
-    id: number;
-    items: CartItem[];
-}
+// const nothing = {// interface Cart {
+// //     id: number;
+// //     items: CartItem[];
+// // }
 
-interface CartItem {
-    id: number;
-    quantity: number;
-    wineBottle: WineBottle;
-}
+// // interface CartItem {
+// //     id: number;
+// //     quantity: number;
+// //     wineBottle: WineBottle;
+// // }
 
-interface Order {
-    id: number;
-    user: User;
-    items: CartItem[];
-    total: number;
-    date: Date;
-}
+// // interface Order {
+// //     id: number;
+// //     user: User;
+// //     items: CartItem[];
+// //     total: number;
+// //     date: Date;
+// // }
 
-interface State {
-    user: User;
-    wineBottles: WineBottle[];
-    orders: Order[];
-}
+// // interface State {
+// //     user: User;
+// //     wineBottles: WineBottle[];
+// //     orders: Order[];
+// // }
 
-interface Action {
-    type: string;
-    payload: any;
-}
+// // interface Action {
+// //     type: string;
+// //     payload: any;
+// // }
 
-interface Dispatch {
-    (action: Action): void;
-}
+// // interface Dispatch {
+// //     (action: Action): void;
+// // }
 
-interface Reducer {
-    (state: State, action: Action): State;
-}
+// // interface Reducer {
+// //     (state: State, action: Action): State;
+// // }
 
-interface Context { 
-    state: State;
-    dispatch: Dispatch;
-}
+// // interface Context { 
+// //     state: State;
+// //     dispatch: Dispatch;
+// // }
+// }
 

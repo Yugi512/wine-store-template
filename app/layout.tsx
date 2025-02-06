@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import {ReactNode} from "react"
 import localFont from "next/font/local"
 import "./globals.css"
+
+import { Toaster } from "@/components/ui/toaster";
+import { SessionProvider } from "next-auth/react";
+import { auth } from "../auth";
 
 const ibmPlexSans = localFont({
   src: [
@@ -20,15 +23,27 @@ const bebasNeue = localFont({
   variable: "--bebas-neue",
 });
 
+export const metadata: Metadata = {
+  title: "Blueberries wine shop",
+  description:
+    "A work in progress template that will recieve updates every month to test features on ",
+};
 
-const RootLayout = ({children}: {children: ReactNode}) => {
+const RootLayout = async ({children}: {children: ReactNode}) => {
+  const session = await auth();
+  
   return (
     <html lang="en">
+    <SessionProvider session={session}>
+
       <body
-       className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased flex flex-col`}
+       className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`}
       >
         {children}
+
+        <Toaster />
       </body>
+    </SessionProvider>
     </html>
   );
 }
